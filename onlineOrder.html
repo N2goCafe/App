@@ -150,13 +150,27 @@ img {margin-bottom: -7px}
 <p>&nbsp;</p>
 <img src="./img/drinks1.jpg" style ="width:90%">
 <p>&nbsp;</p>
-<p><span class="w3-hover-light-green"><a href="https://liff.line.me/1657766696-xdQywqKX/lc-u0uNj?path=%2Fordering" class="text22">立即點餐(大墩店)</a></span></p>
-<p><a href="https://liff.line.me/1657812693-VY9vAqaa/zSKI4YEG?path=%2Fordering" class="text22">立即點餐(豐原店)</a></p>
-<p><a href="#" class="text22">立即點餐(朝富店籌備中)</a></p>
+<p><span class="text22">請選擇分店：</span>
+<select id="store">
+  <option value="1">N2GO台中大墩店</option>
+  <option value="2">N2GO豐原中正店</option>
+  <option value="3">N2GO朝馬朝富店</option>
+</select></p>
+<p><div id="order" onClick="ordering()" class="text22">立即點餐</div></p>
+
 
 </div>
 </header>
 
 </body>
 </html>
-	
+<script>
+	function ordering()
+	{
+		var vStore=document.getElementById("store").value;
+		if(vStore="1")
+			document.location.href ="https://liff.line.me/1657766696-xdQywqKX/lc-u0uNj?path=%2Fordering"
+		else if	(vStore="2")
+				document.location.href ="https://liff.line.me/1657812693-VY9vAqaa/zSKI4YEG?path=%2Fordering"
+	}
+</script>	
