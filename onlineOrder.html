@@ -21,13 +21,13 @@ img {margin-bottom: -7px}
 <style>
 /*字體*/
 select{
-    width: 30%;
-    height: 50px;
+    width: 35%;
+    height: 60px;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding-left: 5px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Open Sans', sans-serif;
     color: #555;
     background-color: rgb(255, 255, 255);
@@ -35,13 +35,13 @@ select{
     border: 1px solid rgb(41, 18, 18);
 }
 select>option{
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-family: '微軟正黑體',Open Sans', sans-serif;
     color: #555;
     background-color: rgb(247, 247, 247);
     background-image: none;
-    font-size: 18px;
-    height: 50px;
+    font-size: 22px;
+    height: 55px;
     padding: 15px;
     border: 1px solid rgb(41, 18, 18);
 }
@@ -65,6 +65,7 @@ select>option{
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+	
 }
 
 .column img {
@@ -96,7 +97,7 @@ select>option{
 .column2 img {
   margin-top: 8px;
   vertical-align: middle;
-  width: 100%;
+  width: 50%;
 }
 
 
@@ -164,6 +165,23 @@ select>option{
 
 
 </style>
+<style>
+.grid-container {
+  display: grid;
+  row-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
 <body>
 <!--儲存html圖片容器-->
 
@@ -178,9 +196,12 @@ select>option{
 <select id="store">
   <option value="1">N2GO台中大墩店</option>
   <option value="2">N2GO豐原中正店</option>
-  <option value="3">N2GO朝馬朝富店</option>
+  <option value="3">N2GO朝馬朝富店(即將開幕)</option>
 </select></p>
-<p><div id="order" onClick="ordering()" class="text22">立即點餐</div></p>
+
+
+
+<p><div id="order" onClick="ordering()" class="text22" align="center"><img src="img/onlineOrdering.png"></div></p>
 
 
 </div>
