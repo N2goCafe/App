@@ -218,13 +218,15 @@ select>option{
 <img src="./img/drinks1.jpg" style ="width:100%">
 <p>&nbsp;</p>
 <p><span class="text22">請選擇分店：</span>
-<select id="store">
+<select id="store" onChange="showpos()">
   <option value="1">N2GO台中大墩店</option>
   <option value="2">N2GO豐原中正店</option>
-  <option value="3">N2GO朝馬朝富店(即將開幕)</option>
+  <option value="3">N2GO台中朝富店(即將開幕)</option>
 </select></p>
 </div>
-
+<p>&nbsp;</p>
+<p><div id="pos" class="text32">您現在所在的位置是：N2GO台中大墩店</div></p>
+<p>&nbsp;</p><p>&nbsp;</p>
 </header>
 <div class="w3-center">
 <div class="row">
@@ -235,10 +237,10 @@ select>option{
 </div>
 </div>
 <p>&nbsp;</p>
-
+<p>&nbsp;</p>
 <!-- Footer -->
 <div class="footer">
-<div>©2021 by N2GO Coffee & Tea</div>
+<div>©2021 by N2GO Drinks</div>
 <div>本網站屬智鯨未來股份有限公司所有</div>
 
 </div>
@@ -283,5 +285,17 @@ select>option{
 			document.location.href ="https://liff.line.me/1657766696-xdQywqKX/lc-u0uNj?path=%2Fmember%2Fpoints"
 		else if	(vStore == "2")
 				document.location.href ="https://liff.line.me/1657812693-VY9vAqaa/zSKI4YEG?path=%2Fmember%2Fpoints";
+	}
+	function showpos()
+	{
+		var vStore=document.getElementById("store").value;
+		var vShowPos=document.getElementById("pos");
+		if(vStore == "1")
+			vShowPos.innerHTML="您現在所在的位置是：N2GO台中大墩店"
+		else if(vStore == "2")	
+			vShowPos.innerHTML="您現在所在的位置是：N2GO豐原中正店"
+		else if(vStore == "3")	
+			vShowPos.innerHTML="您現在所在的位置是：N2GO台中朝富店(即將開幕)";
+			
 	}
 </script>	
